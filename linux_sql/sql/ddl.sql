@@ -1,5 +1,3 @@
-SELECT 'CREATE DATABASE host_agent'
-WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'host_agent')\gexec
 \c host_agent
 
 CREATE TABLE IF NOT EXISTS PUBLIC.host_info
