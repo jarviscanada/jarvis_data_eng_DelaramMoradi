@@ -1,4 +1,3 @@
-CREATE DATABASE host_agent;
 \c host_agent
 
 CREATE TABLE IF NOT EXISTS PUBLIC.host_info
@@ -19,7 +18,7 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_info
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage
 (
     "timestamp"    TIMESTAMP NOT NULL,
-    host_id        SERIAL NOT NULL,
+    host_id        INT4 NOT NULL,
     memory_free    INT4 NOT NULL,
     cpu_idle       INT2 NOT NULL,
     cpu_kernel     INT2 NOT NULL,
