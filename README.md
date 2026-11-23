@@ -159,16 +159,37 @@ exit $?
 
 ### Scripts
 Shell script description and usage (use markdown code block for script usage)
-- psql_docker.sh
-- host_info.sh
-- host_usage.sh
-- crontab
-- queries.sql (describe what business problem you are trying to resolve)
+- `psql_docker.sh`: starts a psql instance
+- `host_info.sh`: inserts hardware specifications data into the database
+- `host_usage.sh`: inserts hardware usage data into the database
+- `crontab`: automatically runs shell scripts
 
 ### Database Modeling
-Describe the schema of each table using markdown table syntax (do not put any sql code)
-- `host_info`
-- `host_usage`
+**`host_info`**
+
+| Column | Type | Constraints |
+|---|---|---|
+| `id` | serial integer | Primary key |
+| `hostname` | varchar | Not null, unique |
+| `cpu_number` | integer | Not null |
+| `cpu_architecture` | varchar | Not null |
+| `cpu_model` | varchar | Not null |
+| `cpu_mhz` | float | Not null |
+| `l2_cache` | integer | Not null |
+| `timestamp` | timestamp | Not null |
+| `total_mem` | integer | Not null |
+
+**`host_usage`**
+
+| Column | Type | Constraints |
+|---|---|---|
+| `timestamp` | timestamp | Not null |
+| `host_id` | integer | Not null, foreign key → `host_info.id` |
+| `memory_free` | integer | Not null |
+| `cpu_idle` | integer | Not null |
+| `cpu_kernel` | integer | Not null |
+| `disk_io` | integer | Not null |
+| `disk_available` | integer | Not null |
 
 ## Test
 How did you test your bash scripts DDL? What was the result?
