@@ -155,7 +155,7 @@ exit $?
 
 ## Implemenation
 ### Architecture
-Draw a cluster diagram with three Linux hosts, a DB, and agents (use draw.io website). Image must be saved to the `assets` directory.
+![architecture](linux_sql/assets/architecture.jpg)
 
 ### Scripts
 Shell script description and usage (use markdown code block for script usage)
