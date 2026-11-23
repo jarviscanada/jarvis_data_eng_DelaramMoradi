@@ -1,0 +1,4 @@
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;9r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[9;1H"/tmp/crontab.6NTuS7" 1L, 113B[1;1H* * * * * /home/rocky/dev/jarvis_data_eng_DelaramMoradi/linux_sql_ss[2;1Hcripts/psql_docker.sh &> /tmp/psql_docker.log
+[94m~                                                                  [4;1H~                                                                  [5;1H~                                                                  [6;1H~                                                                  [7;1H~                                                                  [8;1H~                                                                  [1;1H[?25h[m* [?25l[9;1H[K[9;1H:[?25h;::[?25h[?1004l[?2004l[?1l>[>4;m[?1049l[23;0;0tVim: Caught deadly signal TERM
+Vim: Finished.
+[9;1H
