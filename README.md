@@ -192,14 +192,19 @@ Shell script description and usage (use markdown code block for script usage)
 | `disk_available` | integer | Not null |
 
 ## Test
-How did you test your bash scripts DDL? What was the result?
+The bash scripts were tested using the following command, and they run successfully.
+```
+bash -x [script path] [argument 1] [argument 2] ...
+```
+
 
 ## Deployment
-How did you deploy your app? (e.g. Github, crontab, docker)
+Docker provisions the Postgres instance.
+Cron runs host_usage.sh every minute on each node.
+And the source code is managed through Git and GitHub.
 
 ## Improvements
-Write at least three things you want to improve
-e.g.
-- handle hardware updates
-- blah
-- blah
+Here are some possible future improvements for the project:
+- Writing SQL queries to get insights regarding CPU count and memory
+- Writing SQL queries to get insights regarding average memory usage
+- Writing SQL queries to get insights regarding host reporting failure
