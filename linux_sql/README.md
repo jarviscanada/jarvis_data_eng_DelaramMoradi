@@ -155,7 +155,7 @@ exit $?
 
 ## Implemenation
 ### Architecture
-![architecture](linux_sql/assets/architecture.jpg)
+![architecture](assets/architecture.jpg)
 
 ### Scripts
 Shell script description and usage (use markdown code block for script usage)
