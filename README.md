@@ -148,8 +148,7 @@ exit $?
 ```
 - Crontab setup
 ```
-* * * * * /home/rocky/dev/jarvis_data_eng_DelaramMoradi/linux_sql_scripts/psql_docker.sh &> /tmp/psql_docker.log
-* * * * * /home/rocky/dev/jarvis_data_eng_DelaramMoradi/linux_sql_scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
+* * * * * /home/rocky/dev/jarvis_data_eng_DelaramMoradi/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log
 ```
 
 
