@@ -17,7 +17,7 @@ cpu_architecture=$(echo "$lscpu_out"  | egrep "^Architecture:" | awk '{print $2}
 cpu_model=$(echo "$lscpu_out" | grep "^Model name:" | cut -d: -f2 | xargs)
 cpu_mhz=$(echo "$lscpu_out" | grep "^Model name:" | cut -d@ -f2 | xargs | awk '{print $1 * 1000}')
 l2_cache=$(echo "$lscpu_out" | grep "^L2 cache:" | awk '{print $3}')
-total_mem=$(vmstat --unit M | tail -1 | awk '{print $4}')
+total_mem=$(grep MemTotal /proc/meminfo | awk '{print $2}') # in kB
 timestamp=$(date "+%Y-%m-%d %H:%M:%S") # current timestamp in `2019-11-26 14:40:19` format; use `date` cmd
 
 #construct the INSERT statement from specification variables
